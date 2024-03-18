@@ -69,3 +69,19 @@ resultados = temperatura_promedio(datos_temperaturas)
 for ciudad, promedio in resultados.items():
     print(f"Temperatura promedio en {ciudad}: {promedio:.2f} grados Celsius")
     
+def calcular_descuento(monto_total, porcentaje_descuento=10):
+    descuento = monto_total * (porcentaje_descuento / 100)
+    monto_final = monto_total - descuento
+    return descuento, monto_final
+
+# Llamadas a la función
+monto_compra_1 = 100
+descuento_1, monto_final_1 = calcular_descuento(monto_compra_1)
+print("Descuento aplicado:", descuento_1)
+print("Monto final a pagar:", monto_final_1)
+
+monto_compra_2 = 200
+porcentaje_descuento_2 = 15
+descuento_2, monto_final_2 = calcular_descuento(monto_compra_2, porcentaje_descuento_2)
+print("Descuento aplicado:", descuento_2)
+print("Monto final a pagar:", monto_final_2)
